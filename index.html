@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reportes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #357ac9;
+        }
+        header {
+            width: 100%;
+            height: 200px;
+            background-color: #357ac9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 1000px;
+            height: 90%;
+            object-fit: cover;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #e0d914;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #246ebd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Banner">
+    </header>
+    <center>
+        <hr color="e0d914" width="1500">
+        <br>
+        <h1>Bienvenidos al sistema de Ingesta de Datos para reportes</h1>
+        <br>
+        <hr color="e0d914" width="1100">
+        <br>
+        <h2>Reporte de Clientes</h2>
+        <div class="container">
+            <div class="column">
+                <button class="button" onclick="window.location.href='https://console.cloud.google.com/storage/browser/test_u_ids_pp/reporte_clientes;tab=objects?project=daf-dp-compute-dev&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false';">Agregar archivo</button>
+                <button class="button" onclick="window.location.href='https://5bf28ca8cfae4fcba2701c9d2e805c79-dot-us-east1.composer.googleusercontent.com/dags/dag_u_ids_pp_all/grid';">Ejecutar DAG</button>
+            </div>
+            <div class="column">
+                <button class="button" onclick="window.location.href='https://console.cloud.google.com/bigquery?hl=es-419&project=daf-dp-trusted-dev&ws=!1m5!1m4!4m3!1sdaf-dp-raw-dev!2stest_u_ids_pp!3sreporte_clientes';">Ir a BigQuery (Raw)</button>
+                <button class="button" onclick="window.location.href='https://5bf28ca8cfae4fcba2701c9d2e805c79-dot-us-east1.composer.googleusercontent.com/dags/dag_u_ids_pp_raw/grid';">Ejecutar DAG (Raw)</button>
+            </div>
+            <div class="column">
+                <button class="button" onclick="window.location.href='https://console.cloud.google.com/bigquery?hl=es-419&project=daf-dp-trusted-dev&ws=!1m5!1m4!4m3!1sdaf-dp-trusted-dev!2stest_u_ids_pp!3sreporte_clientes';">Ir a BigQuery (Trusted)</button>
+                <button class="button" onclick="window.location.href='https://5bf28ca8cfae4fcba2701c9d2e805c79-dot-us-east1.composer.googleusercontent.com/dags/dag_u_ids_pp_trusted/grid';">Ejecutar DAG (Trusted)</button>
+            </div>
+            <div class="column">
+                <button class="button" onclick="window.location.href='https://console.cloud.google.com/bigquery?hl=es-419&project=daf-dp-trusted-dev&ws=!1m5!1m4!4m3!1sdaf-dp-trusted-dev!2stest_u_ids_pp!3sreporte_clientes_refined';">Ir a BigQuery (Refined)</button>
+                <button class="button" onclick="window.location.href='https://5bf28ca8cfae4fcba2701c9d2e805c79-dot-us-east1.composer.googleusercontent.com/dags/dag_u_ids_pp_refined/grid';">Ejecutar DAG (Refined)</button>
+            </div>
+            <div class="column">
+                <button class="button"  onclick="window.location.href='https://lookerstudio.google.com/reporting/0dfc798d-7343-41f5-a93e-a063eaf83ef3';">Ir a Dashboard</button>
+            </div>
+        </div>
+        <br>
+        <hr color="e0d914" width="1100">
+        <br>
+        <h2>Reporte de Ventas</h2>
+        <div class="container">
+            <div class="column">
+                <button class="button" onclick="window.location.href='https://console.cloud.google.com/storage/browser/test_u_ids_pp/reporte_clientes?project=daf-dp-compute-dev&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))';">Agregar archivo</button>
+                <button class="button" onclick="window.location.href='https://ea46757fd77745359308b906c8f74b24-dot-us-east1.composer.googleusercontent.com/dags/dag_u_ids_pp/grid?search=dag_u_ids_pp';">Ejecutar DAG</button>
+            </div>
+            <div class="column">
+                <button class="button" onclick="">Ir a BigQuery (Raw)</button>
+                <button class="button" onclick="">Ejecutar DAG (Raw)</button>
+            </div>
+            <div class="column">
+                <button class="button" onclick="">Ir a BigQuery (Trusted)</button>
+                <button class="button" onclick="">Ejecutar DAG (Trusted)</button>
+            </div>
+            <div class="column">
+                <button class="button" onclick="">Ir a BigQuery (Refined)</button>
+                <button class="button" onclick="">Ejecutar DAG (Refined)</button>
+            </div>
+            <div class="column">
+                <button class="button"  onclick="">Ir a Dashboard</button>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
