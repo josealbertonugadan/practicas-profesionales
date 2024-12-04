@@ -1,0 +1,37 @@
+[
+  {
+    "name": "empresa",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "ciudad",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "pais",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "fecha_suscripcion",
+    "mode": "NULLABLE",
+    "type": "DATE",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "clientes",
+    "mode": "REQUIRED",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  }
+]
